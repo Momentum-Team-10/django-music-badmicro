@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>{{album.album_title}}</h3>
+<div>
+    <form action="{% url 'view_album' pk=contact.pk %}" method="POST">
+      {% csrf_token %}
+    </form>
+  </div>
+  
+{% endblock %}

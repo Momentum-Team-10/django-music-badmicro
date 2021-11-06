@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>All Albums</h2>
+
+<p><a href="{% url 'add_album' %}">Add New Album</a></p>
+
+<div class="flex flex-wrap">
+  {% for album in albums %}
+  <div class="w-33 pa2 ba bw2">
+    <h2>{{ album.album_title }}</h2>
+    <div class="flex">
+      {% comment %} iconofont here? and before other divs{% endcomment %}
+      <div class="flex">
+      Artist: {{ album.album_artist }}
+      </div>
+      <div class="flex">
+      Label(s): {{ album.album_labels }}
+      </div>
+      <div class="flex">
+      Tracks: {{ album.album_tracks }}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

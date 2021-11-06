@@ -7,7 +7,7 @@ class Album(models.Model):
     album_title = models.CharField(max_length=255)
     album_artist = models.CharField(max_length=255)
     album_labels = models.CharField(max_length=255, null=True, blank=True)
-    album_tracks = models.IntegerField()
+    album_tracks = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return self.album_title
