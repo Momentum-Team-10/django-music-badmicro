@@ -5,11 +5,11 @@
 
 <p><a href="{% url 'add_album' %}">Add New Album</a></p>
 
-<div class="flex flex-wrap">
+<div class="ma2">
   {% for album in albums %}
-  <div class="w-33 pa2 ba bw2">
+  <div class="w-33 ma2 pa4 ba bw2">
     <h2>{{ album.album_title }}</h2>
-    <div class="flex">
+    <div>
       {% comment %} iconofont here? and before other divs{% endcomment %}
       <div class="flex">
       Artist: {{ album.album_artist }}
